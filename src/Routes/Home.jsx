@@ -110,7 +110,12 @@ const Home = () => {
           }}
         >
           <Box sx={{ display: "flex", flexDirection: "column", gap: "15px" }}>
-            <Typography variant="h4" component="span">
+            <Typography
+              className="teko-text"
+              variant="h2"
+              component="span"
+              sx={{ textWrap: "nowrap" }}
+            >
               ¿QUÉ HACEMOS?.
             </Typography>
             <Typography variant="subtitle2" component="p">
@@ -121,7 +126,12 @@ const Home = () => {
             </Typography>
           </Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "15px" }}>
-            <Typography variant="h4" component="span">
+            <Typography
+              className="teko-text"
+              variant="h2"
+              component="span"
+              sx={{ textWrap: "nowrap" }}
+            >
               ¿QUÉ OFRECEMOS?.
             </Typography>
             <Box
@@ -193,10 +203,20 @@ const Home = () => {
             flexGrow: 1,
           }}
         >
-          <Typography variant="h4" component="span" sx={{ color: "#fff" }}>
+          <Typography
+            className="teko-text"
+            variant="h2"
+            component="span"
+            sx={{ color: "#fff" }}
+          >
             EL INTERNET
           </Typography>
-          <Typography variant="h4" component="span" sx={{ color: "#fff" }}>
+          <Typography
+            className="teko-text"
+            variant="h2"
+            component="span"
+            sx={{ color: "#fff" }}
+          >
             ESTÁ ENTRE NOSOTROS.
           </Typography>
         </Box>
