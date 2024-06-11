@@ -1,18 +1,17 @@
-// Components
-import Home from "./Pages/Home";
-
 // Material
 import {
   Box, 
 } from "@mui/material";
-
+import Navbar from "./components/Navbar";
+import { Outlet } from "react-router-dom";
 import './App.css'
 
 function App() {
 
   return (
     <Box>
-      <Home></Home>
+      <Navbar></Navbar>
+      <Outlet />
     </Box>
   );
 }
