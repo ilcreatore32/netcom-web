@@ -8,10 +8,6 @@ import {
   useTheme,
 } from "@mui/material";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
-import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 // Images
 import foto1 from "../assets/images/foto-1.png";
@@ -94,12 +90,8 @@ export default function SimpleSlider() {
           <Typography>{images[activeStep].title}</Typography>
           <Typography>{images[activeStep].subtitle}</Typography>
         </Paper>
-        <AutoPlaySwipeableViews
+        <Paper
           sx={{ height: "100%" }}
-          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-          index={activeStep}
-          onChangeIndex={handleStepChange}
-          enableMouseEvents
         >
           {images.map((step, index) => (
             <div key={step.title}>
@@ -119,7 +111,7 @@ export default function SimpleSlider() {
               ) : null}
             </div>
           ))}
-        </AutoPlaySwipeableViews>
+        </Paper>
         <MobileStepper
           sx={{ position: "absolute", bottom: "0", width: "100%", }}
           steps={maxSteps}

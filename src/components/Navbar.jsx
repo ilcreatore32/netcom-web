@@ -15,8 +15,66 @@ import { useContext, useMemo } from "react";
 import { ThemeContext } from "../ThemeContextProvider";
 import { styled } from "@mui/material/styles";
 import NetcomLogo from "./NetcomLogo";
+import { NavLink, useMatch  } from "react-router-dom";
 
 const Navbar = () => {
+  const links = [
+    {
+      id: "0",
+      label: "Inicio",
+      href: "/inicio",
+      isActive: useMatch({ path: `/inicio/*`, end: true })
+    },
+    {
+      id: "1",
+      label: "Sobre Nosotros",
+      href: "sobre-nosotros",
+      isActive: useMatch({ path: `/sobre-nosotros/*`, end: true })
+    },
+    {
+      id: "2",
+      label: "Cobertura",
+      isMenu: true,
+      children: [
+        {
+          id: "0",
+          label: "Cobertura Inalambrica",
+          href: `/cobertura/inalambrica`,
+          isActive: useMatch({ path: `/cobertura/inalambrica`, end: true })
+        },
+        {
+          id: "1",
+          label: "Cobertura Fibra Optica",
+          href: "cobertura/fibra-optica",
+          isActive: useMatch({ path: `/cobertura/fibra-optica`, end: true })
+        },
+      ],
+    },
+    {
+      id: "3",
+      label: "Servicios",
+      href: "servicios",
+      isActive: useMatch({ path: `/servicios/*`, end: true })
+    },
+    {
+      id: "4",
+      label: "FAQ",
+      href: "faqs",
+      isActive: useMatch({ path: `/faqs/*`, end: true })
+    },
+    {
+      id: "5",
+      label: "Contacto",
+      href: "contact",
+      isActive: useMatch({ path: `/contact/*`, end: true })
+    },
+    {
+      id: "6",
+      label: "Portal de Pagos",
+      href: "https://pagos.netcomplusve.com:445/portal-de-pago/",
+    },
+  ];
+
   const theme = useTheme();
   const { switchColorMode } = useContext(ThemeContext);
   const activateName = useMemo(
@@ -46,39 +104,54 @@ const Navbar = () => {
           <Button href="/">
             <NetcomLogo></NetcomLogo>
           </Button>
-          <Button color="inherit">Inicio</Button>
-          <Button color="inherit">Sobre Nosotros</Button>
-          <Button
-            color="inherit"
-            aria-controls={open ? "basic-menu" : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? "true" : undefined}
-            onClick={handleClick}
-          >
-            Cobertura
-          </Button>
-          <Menu
-            id="basic-menu"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "basic-button",
-            }}
-          >
-            <MenuItem onClick={handleClose}>Cobertura Inalambrica</MenuItem>
-            <MenuItem onClick={handleClose}>Cobertura Fibra Optica</MenuItem>
-          </Menu>
-          <Button color="inherit">Servicios</Button>
-          <Button color="inherit">FAQ</Button>
-          <Button color="inherit">Contacto</Button>
+          {links.map((link) =>
+            !link.isMenu ? (
+              <Button key={link.id} color={link.isActive ? 'primary' : 'inherit'} sx={{ padding: 0 }}>
+                <NavLink
+                  to={link.href}
+                  style={{ color: "inherit", textDecoration: "none", display: 'block', width: '100%', height: '100%', padding: '6px 8px' }}
+                >
+                  {link.label}
+                </NavLink>
+              </Button>
+            ) : (
+              <Box key={link.id}>
+                <Button
+                  color={link.isActive ? 'primary' : 'inherit'}
+                  aria-controls={open ? `menu${link.id}` : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open ? "true" : undefined}
+                  onClick={handleClick}
+                >
+                  {link.label}
+                </Button>
+                <Menu
+                  id={`menu${link.id}`}
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  MenuListProps={{ "aria-labelledby": "basic-button" }}
+                >
+                  {link.children.map((children) => (
+                    <MenuItem key={children.id} color={children.isActive ? 'primary' : 'inherit'} sx={{ padding: 0 }}>
+                      <NavLink
+                        to={children.href}
+                        style={{ color: "inherit", textDecoration: "none", display: 'block', width: '100%', height: '100%', padding: '6px 8px'}}
+                      >
+                        {children.label}
+                      </NavLink>
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </Box>
+            )
+          )}
           <Tooltip title={`Activate ${activateName} Mode`}>
             <FormControlLabel
               control={<ModeSwitch />}
               onClick={switchColorMode}
             />
           </Tooltip>
-          <Button color="inherit">Portal de Pagos</Button>
         </Toolbar>
       </AppBar>
     </Box>
