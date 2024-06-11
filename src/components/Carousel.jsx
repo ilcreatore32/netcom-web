@@ -6,6 +6,7 @@ import {
   MobileStepper,
   IconButton,
   useTheme,
+  alpha,
 } from "@mui/material";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 
@@ -63,89 +64,84 @@ export default function SimpleSlider() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleStepChange = (step) => {
+  setTimeout(() => {
     setActiveStep(step);
-  };
+  }, 4000);
 
   return (
     <>
-      <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
-        <Paper
-          square
-          elevation={1}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-            bgcolor: "background.default",
-            position: "absolute",
-            zIndex: "1000",
-            width: "500px",
-            top: "35%",
-            left: "35%",
-            padding: "20px",
-            borderRadius: "12px",
-          }}
-        >
-          <Typography>{images[activeStep].title}</Typography>
-          <Typography>{images[activeStep].subtitle}</Typography>
-        </Paper>
-        <Paper
-          sx={{ height: "100%" }}
-        >
-          {images.map((step, index) => (
-            <div key={step.title}>
-              {Math.abs(activeStep - index) <= 2 ? (
-                <Box
-                  component="img"
-                  sx={{
-                    display: "block",
-                    overflow: "hidden",
-                    width: "100%",
-                    maxWidth: "100%",
-                    objectFit: "cover",
-                    height: "calc(100vh - 64px)",
-                  }}
-                  src={step.image}
-                />
-              ) : null}
-            </div>
-          ))}
-        </Paper>
-        <MobileStepper
-          sx={{ position: "absolute", bottom: "0", width: "100%", }}
-          steps={maxSteps}
-          position="static"
-          activeStep={activeStep}
-          nextButton={
-            <IconButton
-              onClick={handleNext}
-              disabled={activeStep === maxSteps - 1}
-              size="small"
-              color="primary"
+      <Box
+        sx={{
+          width: "100%",
+          height: "calc(100vh - 64px)",
+          position: "relative",
+        }}
+      >
+        <Paper sx={{ height: "100%" }}>
+          <Box
+            sx={{
+              width: "100%",
+              height: "100%",
+              backgroundSize: "cover",
+              backgroundImage: `url(${images[activeStep].image})`,
+            }}
+          >
+            <Paper
+              square
+              elevation={1}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                flexDirection: "column",
+                bgcolor: "background.default",
+                position: "absolute",
+                zIndex: "1000",
+                width: "500px",
+                top: "35%",
+                left: "35%",
+                padding: "20px",
+                borderRadius: "12px",
+              }}
             >
-              {theme.direction === "rtl" ? (
-                <KeyboardArrowLeft />
-              ) : (
-                <KeyboardArrowRight />
-              )}
-            </IconButton>
-          }
-          backButton={
-            <IconButton
-              onClick={handleBack}
-              disabled={activeStep === 0}
-              size="small"
-              color="primary"
-            >
-              {theme.direction === "rtl" ? (
-                <KeyboardArrowRight />
-              ) : (
-                <KeyboardArrowLeft />
-              )}
-            </IconButton>
-          }
-        />
+              <Typography>{images[activeStep].title}</Typography>
+              <Typography>{images[activeStep].subtitle}</Typography>
+            </Paper>
+            <MobileStepper
+              sx={{ position: "absolute", bottom: "0", width: "100%" }}
+              steps={maxSteps}
+              position="static"
+              activeStep={activeStep}
+              nextButton={
+                <IconButton
+                  onClick={handleNext}
+                  disabled={activeStep === maxSteps - 1}
+                  size="small"
+                  color="primary"
+                >
+                  {theme.direction === "rtl" ? (
+                    <KeyboardArrowLeft />
+                  ) : (
+                    <KeyboardArrowRight />
+                  )}
+                </IconButton>
+              }
+              backButton={
+                <IconButton
+                  onClick={handleBack}
+                  disabled={activeStep === 0}
+                  size="small"
+                  color="primary"
+                >
+                  {theme.direction === "rtl" ? (
+                    <KeyboardArrowRight />
+                  ) : (
+                    <KeyboardArrowLeft />
+                  )}
+                </IconButton>
+              }
+            />
+          </Box>
+        </Paper>
       </Box>
     </>
   );
