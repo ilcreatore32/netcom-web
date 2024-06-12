@@ -1,5 +1,4 @@
 // Components
-import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
 import { Box, Paper, Typography, Button, useTheme } from "@mui/material";
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";

@@ -16,7 +16,7 @@ import foto2 from "../assets/images/foto-2.jpg";
 import foto3 from "../assets/images/foto-3.jpg";
 import foto4 from "../assets/images/foto-4.jpg";
 
-export default function SimpleSlider() {
+const Carousel = () => {
   const images = [
     {
       title: "INTERNET PREMIUM",
@@ -65,8 +65,10 @@ export default function SimpleSlider() {
   };
 
   setTimeout(() => {
-    setActiveStep(step);
-  }, 4000);
+    activeStep == maxSteps - 1
+      ? setActiveStep(0)
+      : setActiveStep(activeStep + 1);
+  }, 5000);
 
   return (
     <>
@@ -74,40 +76,81 @@ export default function SimpleSlider() {
         sx={{
           width: "100%",
           height: "calc(100vh - 64px)",
-          position: "relative",
+          position: "relative"
         }}
       >
-        <Paper sx={{ height: "100%" }}>
-          <Box
-            sx={{
-              width: "100%",
-              height: "100%",
-              backgroundSize: "cover",
-              backgroundImage: `url(${images[activeStep].image})`,
-            }}
-          >
+        <Paper square sx={{ width: "100%", height: "100%" }}>
+          <Box sx={{ width: "100%", height: "100%" }}>
+            {images.map((img, index) => {
+              return (
+                <Box
+                  component="img"
+                  sx={{
+                    position: "absolute",
+                    width: "100vw",
+                    height: "calc(100vh - 64px)",
+                    zIndex: "999",
+                    backgroundSize: "cover",
+                    backgroundImage: `url(${img.image})`,
+                    opacity: activeStep == index ? "1" : "0",
+                    transition: `all .5s ease-in-out`,
+                  }}
+                ></Box>
+              );
+            })}
             <Paper
               square
               elevation={1}
               sx={{
                 display: "flex",
+                justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column",
-                bgcolor: "background.default",
+                bgcolor: alpha(theme.palette.background.paper, 0.15),
                 position: "absolute",
                 zIndex: "1000",
-                width: "500px",
-                top: "35%",
-                left: "35%",
+                width: "100%",
+                height: "100%",
                 padding: "20px",
-                borderRadius: "12px",
               }}
             >
-              <Typography>{images[activeStep].title}</Typography>
-              <Typography>{images[activeStep].subtitle}</Typography>
+              <Paper
+                square
+                elevation={0}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  bgcolor: alpha(theme.palette.background.paper, 0.4),
+                  position: "absolute",
+                  zIndex: "1100",
+                  borderRadius: "0",
+                  padding: "20px",
+                }}
+              >
+                <Typography variant="h2" component="span" className="teko-text">
+                  {images[activeStep].title}
+                  <Box
+                    className="teko-text"
+                    component="span"
+                    sx={{ color: theme.palette.primary.main }}
+                  >
+                    .
+                  </Box>
+                </Typography>
+                <Typography variant="h6" component="span" color="textSecondary">
+                  {images[activeStep].subtitle}
+                </Typography>
+              </Paper>
             </Paper>
             <MobileStepper
-              sx={{ position: "absolute", bottom: "0", width: "100%" }}
+              sx={{
+                position: "absolute",
+                bottom: "0",
+                width: "100%",
+                zIndex: "1000",
+              }}
               steps={maxSteps}
               position="static"
               activeStep={activeStep}
@@ -145,4 +188,6 @@ export default function SimpleSlider() {
       </Box>
     </>
   );
-}
+};
+
+export default Carousel;
