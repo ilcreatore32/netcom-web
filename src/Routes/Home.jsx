@@ -17,10 +17,12 @@ import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import HttpsIcon from "@mui/icons-material/Https";
 import NetworkCheckIcon from "@mui/icons-material/NetworkCheck";
 import LanIcon from "@mui/icons-material/Lan";
-import Footer from "../components/Footer";
 import bg02 from "../assets/images/bg-2.png";
 
 const Home = () => {
+
+  const theme = useTheme();
+
   const oferts = [
     {
       id: "0",
@@ -119,7 +121,21 @@ const Home = () => {
               component="span"
               sx={{ textWrap: "nowrap" }}
             >
-              ¿QUÉ HACEMOS?.
+              <Box
+                className="teko-text"
+                component="span"
+                sx={{ color: theme.palette.primary.main }}
+              >
+                ¿
+              </Box>
+              QUÉ HACEMOS
+              <Box
+                className="teko-text"
+                component="span"
+                sx={{ color: theme.palette.primary.main }}
+              >
+                ?
+              </Box>
             </Typography>
             <Typography variant="subtitle2" component="p">
               Somos una empresa que provee servicio de Transporte de Datos e
@@ -142,7 +158,21 @@ const Home = () => {
               component="span"
               sx={{ textWrap: "nowrap" }}
             >
-              ¿QUÉ OFRECEMOS?.
+              <Box
+                className="teko-text"
+                component="span"
+                sx={{ color: theme.palette.primary.main }}
+              >
+                ¿
+              </Box>
+              QUÉ OFRECEMOS
+              <Box
+                className="teko-text"
+                component="span"
+                sx={{ color: theme.palette.primary.main }}
+              >
+                ?
+              </Box>
             </Typography>
             <Box
               component="ul"
@@ -234,7 +264,14 @@ const Home = () => {
             component="span"
             sx={{ color: "#fff" }}
           >
-            ESTÁ ENTRE NOSOTROS.
+            ESTÁ ENTRE NOSOTROS
+            <Box
+              className="teko-text"
+              component="span"
+              sx={{ color: theme.palette.primary.main }}
+            >
+              .
+            </Box>
           </Typography>
         </Box>
         <Box
@@ -256,7 +293,6 @@ const Home = () => {
           </Button>
         </Box>
       </Paper>
-      <Footer />
     </>
   );
 };

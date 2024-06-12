@@ -20,7 +20,6 @@ const Router = createBrowserRouter([
       {
         path: "/inicio",
         element: <Home />,
-        errorElement: <ErrorPage />,
       },
       // AboutUs
       {
