@@ -34,21 +34,8 @@ const Navbar = () => {
     {
       id: "2",
       label: "Cobertura",
-      isMenu: true,
-      children: [
-        {
-          id: "0",
-          label: "Cobertura Inalambrica",
-          href: `/cobertura/inalambrica`,
-          isActive: useMatch({ path: `/cobertura/inalambrica`, end: true }),
-        },
-        {
-          id: "1",
-          label: "Cobertura Fibra Optica",
-          href: "cobertura/fibra-optica",
-          isActive: useMatch({ path: `/cobertura/fibra-optica`, end: true }),
-        },
-      ],
+      href: `/cobertura`,
+      isActive: useMatch({ path: `/cobertura`, end: true }),
     },
     {
       id: "3",
@@ -104,71 +91,35 @@ const Navbar = () => {
           <Button href="/">
             <NetcomLogo></NetcomLogo>
           </Button>
-          <Box sx={{ display: 'flex', justifyContent: 'end', gap: '12px', width: '100%'}}>
-            {links.map((link) =>
-              !link.isMenu ? (
-                <Button
-                  key={link.id}
-                  color={link.isActive ? "primary" : "inherit"}
-                  sx={{ padding: 0 }}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "end",
+              gap: "12px",
+              width: "100%",
+            }}
+          >
+            {links.map((link) => (
+              <Button
+                key={link.id}
+                color={link.isActive ? "primary" : "inherit"}
+                sx={{ padding: 0 }}
+              >
+                <NavLink
+                  to={link.href}
+                  style={{
+                    color: "inherit",
+                    textDecoration: "none",
+                    display: "block",
+                    width: "100%",
+                    height: "100%",
+                    padding: "6px 8px",
+                  }}
                 >
-                  <NavLink
-                    to={link.href}
-                    style={{
-                      color: "inherit",
-                      textDecoration: "none",
-                      display: "block",
-                      width: "100%",
-                      height: "100%",
-                      padding: "6px 8px",
-                    }}
-                  >
-                    {link.label}
-                  </NavLink>
-                </Button>
-              ) : (
-                <Box key={link.id}>
-                  <Button
-                    color={link.isActive ? "primary" : "inherit"}
-                    aria-controls={open ? `menu${link.id}` : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={open ? "true" : undefined}
-                    onClick={handleClick}
-                  >
-                    {link.label}
-                  </Button>
-                  <Menu
-                    id={`menu${link.id}`}
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    MenuListProps={{ "aria-labelledby": "basic-button" }}
-                  >
-                    {link.children.map((children) => (
-                      <MenuItem
-                        key={children.id}
-                        color={children.isActive ? "primary" : "inherit"}
-                        sx={{ padding: 0 }}
-                      >
-                        <NavLink
-                          to={children.href}
-                          style={{
-                            color: "inherit",
-                            textDecoration: "none",
-                            display: "block",
-                            width: "100%",
-                            height: "100%",
-                            padding: "6px 8px",
-                          }}
-                        >
-                          {children.label}
-                        </NavLink>
-                      </MenuItem>
-                    ))}
-                  </Menu>
-                </Box>
-              )
-            )}
+                  {link.label}
+                </NavLink>
+              </Button>
+            ))}
             <Tooltip
               title={activateName == "Light" ? `Modo Claro` : `Modo Oscuro`}
             >

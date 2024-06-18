@@ -1,6 +1,10 @@
+import CoverageApp from "../components/CoverageApp"
+
 const Coverage = () => {
   return (
-    <div>Coverage</div>
+    <>
+      <CoverageApp />
+    </>
   )
 }
 

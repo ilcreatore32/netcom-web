@@ -1,0 +1,852 @@
+[
+  {
+    "area": "Valencia",
+    "name": "El Socorro",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.126172508639058%2C-68.05168324631671&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Trapichito",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.127906617885966%2C-68.02313817236785&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Lomas de Funval",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.123303606312408%2C-68.0195557450748&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Andres Bello",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.12755901324809%2C-68.00754747675174&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Bella Vista I y II",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.15833583591813%2C-68.01224634365539&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Sector Punta Gorda",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.136335838709558%2C-68.02015783809814&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Los Parques",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.136912529114923%2C-68.03831938645715&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Bella Florida",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.148178036436525%2C-68.0296451834861&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Parque Florida",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.146789168989791%2C-68.03565322605591&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Las Acacias",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.204822205690615%2C-68.00621862487141&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Llano Verde",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.147748811871459%2C-68.03751462348596&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Los Caobos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.155338254414808%2C-68.02508533966574&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Ricardo Urriera",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.142883227728785%2C-68.02073196690365&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "La Romana",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.150870269214854%2C-68.02149708968811&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "La Bocaina",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.148941089695724%2C-68.00992430243684&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Fundacion Mendoza",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.158561949021808%2C-68.00496967701862&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Monumental",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.145292520976017%2C-68.00455063146183&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Francisco de Miranda",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.145277159183435%2C-68.01539145899963&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "El Combate",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.14297744130851%2C-68.00486989680749&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Canaima",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.144318141539014%2C-68.01633985667772&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "El Triunfo",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.152972547645005%2C-67.99466973430513&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "13 de Septiembre",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.149659562327791%2C-67.99388603684045&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Carmen Norte y Sur",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.1605322480852%2C-67.99734140681215&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Guajiros",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.15937541820426%2C-67.9928917218277&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Brisas del Terminal",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.157817809939608%2C-67.98678619822023&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "La Trinidad",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.160188403149736%2C-67.98412800535976&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Bello Monte",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.165228060075801%2C-67.97932996773565&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Isabelica",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.163277426972549%2C-67.96965888394013&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Parque Valencia",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.155270003178185%2C-67.96651038703025&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Cabriales",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.195551977478063%2C-68.0021183431012&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Barrio Central",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.174733429262325%2C-68.01837039571494&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Tierra Clara",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.149304917502892%2C-67.97456800000002&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Boca de Rio",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.151045038851514%2C-67.97842556561619&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "San Blas",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.184690861009406%2C-67.9934353791339&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Santa Rosa",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.167044687183267%2C-67.99895527645356&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Michelena",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.179002916151365%2C-67.96870959999998&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "El Pajal",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.176189815272494%2C-67.99821497134293&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Los Taladros",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.166246130512626%2C-67.99773938651285&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Don Bosco",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.166870459570642%2C-68.00911889487816&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "La Candelaria Norte y Sur",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.173159163829748%2C-68.00781720714572&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "El Calvario",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.177624744714496%2C-68.01355101250003&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Eutimio Rivas",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.171437735717046%2C-68.0149841464901&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "19 de Abril",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.153111617329586%2C-68.01110700000001&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "El Prado",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.161986853538515%2C-68.01827396885827&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Palotal",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.162186939371733%2C-68.0040620988299&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Cañaveral",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.16222717147939%2C-68.00932621405&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Los Caimitos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.134399118152565%2C-68.01995090000003&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "La Guacamaya",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.175263516321507%2C-68.0195807&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "La Florida",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.151942852653702%2C-68.04310221102057&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "La Quizanda",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.177066401582017%2C-67.97112472353831&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Los Chaguaramos (I, II, III, IV, V)",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.129917331447011%2C-68.04328157545798&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "La Colina",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.122314252127005%2C-68.03377039741908&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Villa Paraíso",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.126289650946896%2C-68.04260550646136&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "La Gloria",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.132911818353925%2C-68.03349666787383&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Avenida Las Mariposas",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.123636518671391%2C-68.04610249999999&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Pedro Herrera y Lomas de Urdaneta",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.121693204346462%2C-68.02722580787625&z=15"
+  },
+  {
+    "area": "Valencia",
+    "name": "Bicentenario",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.133776768209703%2C-68.02765045&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Las Quintas",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.243503208517726%2C-68.0085279939574&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Free Market",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.24314266323433%2C-68.0123575&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Av. 190",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.259453912492873%2C-68.01759269999998&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Guere",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.249488212945861%2C-68.02523790000002&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "La Begoña",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.260606307056662%2C-68.0218613528951&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Barrio Union",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.263161605133106%2C-68.01873918564503&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "El Retobo",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.265261884666602%2C-68.014216999726&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Guayabal",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.263119300797495%2C-68.01022044413817&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Guayabitos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.257889790394902%2C-68.00870234571128&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Centro de Naguanagua",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.256602565372122%2C-68.01204983668194&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Rio Sil",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.280172911551343%2C-68.01913855&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Vivienda Rural de Barbula",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.288908934826825%2C-68.0184174265777&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Santa Eduvigis",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.288908934826825%2C-68.0184174265777&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "La Luz",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.28781175587474%2C-68.0228698438164&z=15"
+  },
+  {
+    "area": "Naguanagua",
+    "name": "Malagon",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.29581918970656%2C-68.01961895213495&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Cumboto 2",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.464854544453729%2C-68.0360555679125&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Urb. Alfredo Travieso P",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.460312487699001%2C-68.03345919946187&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Las Llaves",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.464640506406262%2C-68.0286570853195&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "La Corina",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.462959953255893%2C-68.0302643&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Santa Cruz",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.456440237706705%2C-68.04603872904099&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "San Millan",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.46763280066359%2C-68.0164527&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Malecon",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.480418402464618%2C-68.01012205&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Rancho Grande",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.452425717207111%2C-68.00475956168405&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Polvorin",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.462237986804501%2C-68.00397640633936&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Valle Seco",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.446548956576018%2C-68.0052851786148&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "San Esteban",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.459964286256678%2C-68.02193103896838&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "La Sorpresa",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.470300402923215%2C-68.06221799999997&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "La Libertad",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.468084253023605%2C-68.06883485000002&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "La Belisa",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.47258510281964%2C-68.04061070000003&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Cumboto Norte",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.475752812973631%2C-68.03338414109874&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Cumboto Sur",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.471485440417702%2C-68.03535009165849&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Cumbotico",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.460623903365523%2C-68.038373&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Barrio Los Cocos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.462269684040496%2C-68.0425197218731&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Av. La Paz",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.47232940283493%2C-68.02994129999999&z=15"
+  },
+  {
+    "area": "Puerto Cabello",
+    "name": "Casco Central",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.474754452725003%2C-68.00930099999998&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Tricentenario",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.202705125105595%2C-67.87969349542824&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "La Ceiba",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.197942891472252%2C-67.88468246076474&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Guaicaipuro",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.201015582621965%2C-67.88780456494904&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Tesoro del Indio",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.203760158023222%2C-67.88861560908019&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Nuestra Sra. de Coromoto",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.207655710906753%2C-67.88845943434679&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Rafael Caldera",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.205101944064669%2C-67.88171054783459&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Dios Todopoderoso",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.210497723007082%2C-67.89018630100517&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "La Floresta",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.241043110862485%2C-67.88184936050476&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Naranjillos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.223381914132773%2C-67.89124149999999&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "La Tigrera",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.231150182217952%2C-67.87254813265298&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Loma Linda",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.231163822359688%2C-67.86883314731007&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "La Coromoto",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.22062196426188%2C-67.8767067&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "La Libertad",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.221373124532054%2C-67.86422791119266&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "La Lucha",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.218972103838553%2C-67.86126675035659&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Mocundito",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.218493710813728%2C-67.87345470812026&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Bosque de Saman",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.216584864445487%2C-67.87703274999998&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "El Saman",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.213617089662758%2C-67.86905049597166&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "El Prado",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.218433881385373%2C-67.86886280271229&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "El Apamate",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.21575861839558%2C-67.86771474141517&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Villa Guaсага",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.212979012213488%2C-67.86154027745853&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Los Naranjos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.240027430116509%2C-67.88668869500873&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "La Emboscada",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.246293175109958%2C-67.88843750260114&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Las Brisas",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.2480165420208%2C-67.89441345604814&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Los Mangos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.235372864125818%2C-67.89459069792028&z=15"
+  },
+  {
+    "area": "Guacara",
+    "name": "Cristo Salva",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.226525419923131%2C-67.86681600592367&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Ezequiel Zamora",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.21528531450097%2C-67.5461345&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "La Morita",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.225290116802565%2C-67.54521129637331&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Sorocaima I",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.220140397249441%2C-67.52415065786462&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Av. Aragua",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.227162013964541%2C-67.57252129999999&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Saman de Guere",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.225572214073324%2C-67.52165647071756&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Calle Romulo Gallegos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.224045814102578%2C-67.52557200000001&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Cagua",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.175933271248157%2C-67.46081827215521&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Av. Francisco Montoya",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.223571114127772%2C-67.5442571&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Funda Cagua",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.184827885129392%2C-67.44905944603684&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Santa Ines",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.211975704589975%2C-67.53779227599755&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Manuelita Sáenz",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.171566531911742%2C-67.4428293820188&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Coropo",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.204074209348935%2C-67.53936800000001&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "La Comuna",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.152185949498875%2C-67.45771231162732&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Santa Rita",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.206851747873737%2C-67.55561827496474&z=15"
+  },
+  {
+    "area": "Aragua",
+    "name": "Corinsa Colonial I",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.169373310949313%2C-67.46221841977565&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Las Garcitas",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.192193229007547%2C-67.93343963303367&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Paraparal",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.185551151486155%2C-67.91856142053244&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Centro de Los Guayos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.189621990226929%2C-67.93893812848074&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Invasiones",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.184632508215621%2C-67.93742543694654&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Ciudad Alianza (I, II, III y IV Etapa)",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.193357805663755%2C-67.89355399234431&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Vivienda Popular Los Guayos II",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.176664818223784%2C-67.9365026771837&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Urbanización Los Guayos II",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.177652215668228%2C-67.94147547012136&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Quintas 2000",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.177652215668228%2C-67.94147547012136&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Fundación Felix Rios",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.176717605415803%2C-67.91525952819549&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "José Ignacio Acevedo",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.179156906210444%2C-67.94599772080669&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Zona Industrial de Valencia",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.17414982739785%2C-67.95220061400748&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Barrio Los Cerritos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.166516197170797%2C-67.90452000244255&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Urb. Industrial La Quizanda",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.181078663720985%2C-67.9591796551006&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Urb. Industrial Municipal",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.169103354371575%2C-67.95536402447559&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Negro Primero",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.183284406805576%2C-67.93077831584071&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "El Roble",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.156274186591958%2C-67.9113297&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Las Casitas",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.16759363551532%2C-67.92172914118812&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Las Agüitas",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.167475596522618%2C-67.92602067017924&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Urb. Los Cerritos",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.170381514877342%2C-67.9118908&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Agua Sal",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.197741998485705%2C-67.89344795090032&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Tacarigua (I, II, II, IV, V)",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.180660401513812%2C-67.91030310014455&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Miralvalle",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.180888774389498%2C-67.91411162685985&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Zona Industrial Altamira",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.19824878031293%2C-67.92516230628404&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Brisas de Paraparal",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.189906860063575%2C-67.91941159055736&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Yurubí",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.182789561628045%2C-67.92154675190798&z=15"
+  },
+  {
+    "area": "Los Guayos",
+    "name": "Villa Alianza",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.19269448696126%2C-67.8978360317838&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "Urb. Lago Jardin",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.229407892539783%2C-67.84704566749178&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "Tierra Del Sol",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.231039126959391%2C-67.8368478786624&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "El Guayabal",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.233103151749503%2C-67.8287315456295&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "Los Bucares",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.237708238201353%2C-67.83682329999999&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "La Ensenada",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.232424081396887%2C-67.83494566215717&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "Las Gardenias",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.239137125975018%2C-67.82817901507632&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "Los Palos Grandes",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.239221638981206%2C-67.82895685736501&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "Villas del Centro",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.253367837086534%2C-67.8155374&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "La Camachera",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.256119241639617%2C-67.80930166633752&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "Los Castores",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.256135002793782%2C-67.79983875809955&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "Campo Alegre",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.250268445437195%2C-67.79784348653071&z=15"
+  },
+  {
+    "area": "San Joaquín",
+    "name": "Virgen del Carmen",
+    "map": "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll=10.251239743296985%2C-67.78428223775141&z=15"
+  }
+]
