@@ -21,7 +21,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Footer = () => {
-  
 
   const services = [
     {
@@ -94,6 +93,16 @@ const Footer = () => {
       id: "0",
       label: "Portal de Pagos",
       href: "https://pagos.netcomplusve.com:445/portal-de-pago/",
+    },
+    {
+      id: "1",
+      label: "Cobertura",
+      href: "/cobertura",
+    },
+    {
+      id: "2",
+      label: "Oficinas Comerciales",
+      href: "/contacto#otros",
     },
   ];
 

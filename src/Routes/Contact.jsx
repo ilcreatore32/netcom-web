@@ -170,6 +170,7 @@ const Contact = () => {
       </Paper>
       {/* Otros Metodos de Contacto */}
       <Paper
+        id="otros"
         square
         elevation={1}
         sx={{

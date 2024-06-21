@@ -52,8 +52,8 @@ const Navbar = () => {
     {
       id: "5",
       label: "Contacto",
-      href: "contact",
-      isActive: useMatch({ path: `/contact/*`, end: true }),
+      href: "contacto",
+      isActive: useMatch({ path: `/contacto/*`, end: true }),
     },
     {
       id: "6",
