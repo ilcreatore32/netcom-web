@@ -5,49 +5,54 @@ import {
   Box,
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
   useTheme,
 } from "@mui/material";
-import NetcomLogo from "./NetcomLogo";
 import { Link } from "react-router-dom";
+
+// Logo
+import NetcomLogo from "./NetcomLogo";
+
+// Icons
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Footer = () => {
+  
+
   const services = [
     {
       id: "0",
       label: "Residencial Inalámbrico",
-      href: "#",
+      href: "http://localhost:5173/servicios?value=residencial#planes",
     },
     {
       id: "1",
       label: "Pyme Inalámbrico",
-      href: "#",
+      href: "http://localhost:5173/servicios?value=pyme#planes",
     },
     {
       id: "2",
       label: "Residencial Fibra Óptica",
-      href: "#",
+      href: "http://localhost:5173/servicios?value=residencial#planes",
     },
     {
       id: "3",
       label: "Pyme Fibra Óptica",
-      href: "#",
+      href: "http://localhost:5173/servicios?value=pyme#planes",
     },
     {
       id: "4",
       label: "Community",
-      href: "#",
+      href: "http://localhost:5173/servicios?value=community#planes",
     },
     {
       id: "5",
       label: "Empresarial Dedicado",
-      href: "#",
+      href: "http://localhost:5173/servicios?value=empresarial-dedicado#planes",
     },
   ];
 
@@ -173,13 +178,10 @@ const Footer = () => {
           {generateList("Servicios", services)}
         </Grid>
         <Grid item xs={2}>
-          {generateList("Servicios", services)}
+          {generateList("Nuestras Redes", socials)}
         </Grid>
         <Grid item xs={2}>
           {generateList("Plataforma", platforms)}
-        </Grid>
-        <Grid item xs={2}>
-          {generateList("Nuestras Redes", socials)}
         </Grid>
       </Grid>
       <Box

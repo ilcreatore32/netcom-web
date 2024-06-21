@@ -14,6 +14,7 @@ import {
   LinearProgress,
 } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
+import { useSearchParams } from "react-router-dom";
 
 // Images
 import bg02 from "../assets/images/bg-2.png";
@@ -255,8 +256,13 @@ const services = [
 ];
 
 const Services = () => {
+  let [searchParams, setSearchParams] = useSearchParams();
+  const valueParam = searchParams.get("value");
+
   const theme = useTheme();
-  const [value, setValue] = useState(tabs[0].key);
+  const [value, setValue] = useState(
+    valueParam != null ? valueParam : tabs[0].key
+  );
 
   const generate = ({ key, name, download, upload }) => {
     return (
@@ -295,7 +301,6 @@ const Services = () => {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
-                  alignItems: "center",
                 }}
               >
                 <Typography variant="h6" component="span">
@@ -308,6 +313,7 @@ const Services = () => {
                     display: "flex",
                     justifyContent: "center",
                     gap: "10px",
+                    fontSize: "14px",
                   }}
                 >
                   <DownloadIcon />
@@ -320,7 +326,6 @@ const Services = () => {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
-                  alignItems: "center",
                 }}
               >
                 <Typography variant="h6" component="span">
@@ -333,6 +338,7 @@ const Services = () => {
                     display: "flex",
                     justifyContent: "center",
                     gap: "10px",
+                    fontSize: "14px",
                   }}
                 >
                   <UploadIcon />
@@ -342,7 +348,7 @@ const Services = () => {
             </Box>
           </CardContent>
           <CardActions sx={{ justifyContent: "end" }}>
-            <Button size="small" variant="contained">
+            <Button size="small" variant="contained" disableElevation>
               Presupuesto
             </Button>
           </CardActions>
@@ -371,10 +377,11 @@ const Services = () => {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [progress]);
 
   return (
     <>
+      {/* 'Servicios' */}
       <Box
         sx={{
           width: "100vw",
@@ -441,40 +448,15 @@ const Services = () => {
           </Paper>
         </Paper>
       </Box>
+      {/* 'Planes' */}
       <Paper
+        id="planes"
         square
         elevation={1}
         sx={{
           display: "flex",
           width: "100%",
-          minHeight: "150px",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "20px",
-          padding: "30px",
-          color: theme.palette.primary.contrastText,
-          background: theme.palette.primary.main,
-        }}
-      >
-        <NetworkCheckIcon sx={{ fontSize: "64px" }} />
-        <Typography className="teko-text" variant="h2" component="span">
-          Tecnología Escalable
-          <Box
-            className="teko-text"
-            component="span"
-            sx={{ color: theme.palette.primary.main }}
-          >
-            .
-          </Box>
-        </Typography>
-      </Paper>
-      <Paper
-        square
-        elevation={1}
-        sx={{
-          display: "flex",
-          width: "100%",
-          minHeight: "500px",
+          height: "100vh",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
@@ -482,17 +464,27 @@ const Services = () => {
           padding: "30px",
         }}
       >
-        <Typography className="teko-text" variant="h2" component="span">
-          Nuestros Planes
-          <Box
-            className="teko-text"
-            component="span"
-            sx={{ color: theme.palette.primary.main }}
-          >
-            .
-          </Box>
-        </Typography>
-        <Box sx={{ width: "100%" }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "20px",
+          }}
+        >
+          <NetworkCheckIcon sx={{ fontSize: "64px" }} />
+          <Typography className="teko-text" variant="h2" component="span">
+            Tecnología Escalable
+            <Box
+              className="teko-text"
+              component="span"
+              sx={{ color: theme.palette.primary.main }}
+            >
+              .
+            </Box>
+          </Typography>
+        </Box>
+        <Box sx={{ width: "100%", height: "100%" }}>
           <TabContext value={value}>
             <Paper sx={{ border: "none" }} square variant="outlined">
               <TabList value={value} onChange={handleChange}>
@@ -583,8 +575,7 @@ const Services = () => {
                     es la misma que la de descarga, son personalizados a la
                     necesidad de cada cliente, están disponibles a partir de
                     <span style={{ color: theme.palette.primary.main }}>
-                      {" "}
-                      10 Mbps{" "}
+                      {" 10 Mbps "}
                     </span>
                     y pueden ser escalables hasta cumplir con las necesidades de
                     Internet.
@@ -608,7 +599,7 @@ const Services = () => {
                     }}
                     component="span"
                   >
-                    10 Mbps{" "}
+                    10 Mbps
                   </Typography>
                   <LinearProgress
                     variant="determinate"
