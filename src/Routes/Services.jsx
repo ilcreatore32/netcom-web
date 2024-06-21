@@ -613,7 +613,7 @@ const Services = () => {
                   <LinearProgress
                     variant="determinate"
                     value={progress}
-                    sx={{ height: 10 }}
+                    sx={{ height: 4 }}
                   />
                 </Box>
                 <Box
@@ -639,7 +639,7 @@ const Services = () => {
                     Otros Planes
                     <SpeedIcon />
                   </Typography>
-                  <LinearProgress sx={{ height: 10 }} />
+                  <LinearProgress sx={{ height: 12 }} />
                 </Box>
               </Paper>
             </TabPanel>
