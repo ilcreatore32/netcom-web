@@ -176,7 +176,7 @@ const Contact = () => {
           display: "flex",
           width: "100%",
           flexDirection: "column",
-          minHeight: "500px",
+          minHeight: "100vh",
           justifyContent: "center",
           gap: "20px",
           padding: "60px",

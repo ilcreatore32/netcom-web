@@ -14,7 +14,7 @@ import {
 import PropTypes from "prop-types";
 
 // Icons
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 const GoogleMap = ({ map }) => {
@@ -111,7 +111,7 @@ const ContactMethods = () => {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", flexGrow: 1 }}>
       <Box
         sx={{
           flexGrow: 1,
