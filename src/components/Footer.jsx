@@ -31,12 +31,12 @@ const Footer = () => {
     },
     {
       id: "2",
-      label: "Residencial Fibra Optica",
+      label: "Residencial Fibra Óptica",
       href: "#",
     },
     {
       id: "3",
-      label: "Pyme Fibra Optica",
+      label: "Pyme Fibra Óptica",
       href: "#",
     },
     {

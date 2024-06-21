@@ -188,7 +188,7 @@ const CoverageApp = () => {
               sx={{ display: "flex", alignItems: "center", gap: "5px" }}
             >
               <CableIcon />
-              Fibra Optica
+              Fibra Óptica
             </ToggleButton>
           </ToggleButtonGroup>
         </Box>
@@ -196,7 +196,7 @@ const CoverageApp = () => {
           <Alert severity="info" sx={{ mb: "10px" }}>
             Estas visualizando la cobertura
             <strong>
-              {cType == "wireless" ? " Inalámbrica " : " de Fibra Optica "}
+              {cType == "wireless" ? " Inalámbrica " : " de Fibra Óptica "}
             </strong>
             de Netcom Plus. Tiempo de Actualización de al menos{" "}
             <strong>30 días</strong>.
