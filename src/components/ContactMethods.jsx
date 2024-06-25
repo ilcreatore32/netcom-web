@@ -130,7 +130,7 @@ const ContactMethods = () => {
             minWidth: 240,
           }}
         >
-          <Tab label="Direcciónes" {...a11yProps(0)} />
+          <Tab label="Oficinas Comerciales" {...a11yProps(0)} />
           <Tab label="Números" {...a11yProps(1)} />
           <Tab label="Correos Electrónicos" {...a11yProps(2)} />
         </Tabs>

@@ -116,13 +116,12 @@ const Contact = () => {
         </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: "15px" }}>
           <Typography variant="body1" component={"span"}>
-            Al presionar solicitud de información se desplegará un formulario,
-            el cual contiene los siguientes campos requeridos:
+            Con este Formulario puedes Solicitar Información a nuestro equipo de
+            Ventas, el cual contiene los siguientes campos requeridos:
           </Typography>
           <InformationRequest />
           <Typography variant="body1" component={"span"}>
-            Al llenar el formulario un asesor de Netcom Plus te hará llegar la
-            información necesaria por medio de los datos proporcionados.
+            Al enviar tu información un asesor de Netcom Plus se comunicara contigo.
           </Typography>
         </Box>
       </Paper>

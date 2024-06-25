@@ -1,14 +1,24 @@
 import { useState, useEffect } from "react";
-import { Box, TextField, Button } from "@mui/material";
+import { Box, TextField, Button, Snackbar, Alert, Slide } from "@mui/material";
+import axios from "axios";
+import CountrySelector from "./CountrySelector";
 
 const InformationRequest = () => {
+  // Whatsapp Token & Error
+  const [token, setToken] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
+
+  // Form Adminitration
   const [form, setForm] = useState({
     name: "",
     lastname: "",
-    phone: "",
     email: "",
-    document: "",
     location: "",
+    phone: "",
+    countryName: "",
+    countryPhone: "",
+    document: "",
+    plan: "",
   });
   const [isValid, setIsValid] = useState(false);
   const [errors, setErrors] = useState({
@@ -20,15 +30,7 @@ const InformationRequest = () => {
       state: false,
       message: "",
     },
-    phone: {
-      state: false,
-      message: "",
-    },
     email: {
-      state: false,
-      message: "",
-    },
-    document: {
       state: false,
       message: "",
     },
@@ -36,8 +38,42 @@ const InformationRequest = () => {
       state: false,
       message: "",
     },
+    phone: {
+      state: false,
+      message: "",
+    },
+    countryName: {
+      state: false,
+      message: "",
+    },
+    countryPhone: {
+      state: false,
+      message: "",
+    },
+    document: {
+      state: false,
+      message: "",
+    },
+    plan: {
+      state: false,
+      message: "",
+    },
   });
 
+  // Feedback Control
+  const [open, setOpen] = useState(false);
+  const handleClose = (e, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+  function SlideTransition(props) {
+    return <Slide {...props} direction="right" />;
+  }
+
+  // Form Checking
   useEffect(() => {
     const isValid =
       Object.values(form).every((value) => {
@@ -50,16 +86,24 @@ const InformationRequest = () => {
     setIsValid(isValid);
   }, [form, errors]);
 
+  // Form Changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    setForm({
+      ...form,
+      [name]: value,
+      ["countryName"]: document.getElementById("countryName").value,
+      ["countryPhone"]: document.getElementById("countryPhone").value,
+    });
+
     handleErrors(e);
   };
 
+  // Form Errors & Validation
   const handleErrors = (e) => {
     const { name, value } = e.target;
 
-    if (value === "") {
+    if (value === "" && name !== "plan") {
       setErrors({
         ...errors,
         [name]: {
@@ -124,22 +168,74 @@ const InformationRequest = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  // Form Submit
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (isValid) {
-      let message = `Hola soy un Cliente que busca Solicitar Información, aqui esta mi información:
-        Nombres: ${form.name},
-        Apellidos: ${form.lastname},
-        Correo Electrónico: ${form.email},
-        Teléfono: ${form.phone},
-        Ubicación: ${form.location},
-        Documento: ${form.document},  
-        Muchas Gracias de antemano.
-      `;
 
-      window.open(`https://wa.me/584244200034?text=${message}`, "_blank");
+    if (!token) {
+      console.error("Token no disponible. Por favor espere...");
+      return;
+    }
+
+    if (isValid) {
+      try {
+        const response = await axios.post(
+          "https://api.liveconnect.chat/prod/proxy/transfer",
+          {
+            id_conversacion: "",
+            mensaje: `Solicitud de Información:
+
+              Nombres: ${form.name},
+              Apellidos: ${form.lastname},
+              Correo Electrónico: ${form.email},
+              Teléfono: ${form.phone},
+              Ubicación: ${form.location},
+              Documento: ${form.document},
+              Interesado en el Plan: ${form.plan}
+
+              Este mensaje fue generado desde la Web de Netcom Plus.
+            `,
+            // Canal de Pruebas
+            id_canal: 62,
+            estado: 1,
+            contacto: { celular: `${form.countryPhone}${form.phone}` },
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+              PageGearToken: token,
+            },
+          }
+        );
+        console.log(response);
+        setOpen(true);
+      } catch (error) {
+        setErrorMessage(error.message);
+        setOpen(true);
+      }
     }
   };
+
+  // Token Request on Load
+  useEffect(() => {
+    const fetchToken = async () => {
+      try {
+        const response = await axios.post(
+          "https://api.liveconnect.chat/prod/account/token",
+          {
+            cKey: "f78130cc10a9ca824e455418ecbe736c",
+            privateKey: "25b2fc7eda9bbd0019785443a7900e8a",
+          },
+          { headers: { "Content-Type": "application/json" } }
+        );
+        setToken(response.data.PageGearToken);
+      } catch (error) {
+        setErrorMessage(error.message);
+      }
+    };
+
+    fetchToken();
+  }, []);
 
   return (
     <Box
@@ -190,6 +286,25 @@ const InformationRequest = () => {
           onChange={(e) => handleChange(e)}
         />
         <TextField
+          id="location"
+          name="location"
+          label=" Ubicación"
+          variant="outlined"
+          fullWidth
+          error={errors.location.state}
+          helperText={errors.location.message}
+          onChange={(e) => handleChange(e)}
+        />
+      </Box>
+      <Box
+        sx={{ display: "flex", justifyContent: "space-between", gap: "15px" }}
+      >
+        <CountrySelector
+          error={errors.countryName.state}
+          helperText={errors.countryName.message}
+          onChange={handleChange}
+        />
+        <TextField
           id="phone"
           name="phone"
           label="Teléfono"
@@ -204,16 +319,6 @@ const InformationRequest = () => {
         sx={{ display: "flex", justifyContent: "space-between", gap: "15px" }}
       >
         <TextField
-          id="location"
-          name="location"
-          label=" Ubicación"
-          variant="outlined"
-          fullWidth
-          error={errors.location.state}
-          helperText={errors.location.message}
-          onChange={(e) => handleChange(e)}
-        />
-        <TextField
           id="document"
           name="document"
           label="Documento de Identificación"
@@ -223,17 +328,51 @@ const InformationRequest = () => {
           helperText={errors.document.message}
           onChange={(e) => handleChange(e)}
         />
+        <TextField
+          id="plan"
+          name="plan"
+          label="Plan Deseado (Opcional)"
+          variant="outlined"
+          fullWidth
+          error={errors.plan.state}
+          helperText={errors.plan.message}
+          onChange={(e) => handleChange(e)}
+        />
       </Box>
       <Box sx={{ display: "flex", justifyContent: "end" }}>
         <Button
           type="submit"
           variant="contained"
-          disabled={!isValid}
+          disabled={!isValid && token !== null}
           disableElevation
         >
           Solicitar Información
         </Button>
       </Box>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        TransitionComponent={SlideTransition}
+      >
+        {errorMessage === null ? (
+          <Alert
+            severity="success"
+            variant="filled"
+            sx={{ width: "100%", color: "#fff" }}
+          >
+            Se ha enviado correctamente su Solicitud
+          </Alert>
+        ) : (
+          <Alert
+            severity="error"
+            variant="filled"
+            sx={{ width: "100%", color: "#fff" }}
+          >
+            Ha ocurrido un Error, intente nuevamente
+          </Alert>
+        )}
+      </Snackbar>
     </Box>
   );
 };
