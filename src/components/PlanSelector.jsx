@@ -8,6 +8,7 @@ import {
   FormHelperText,
   useTheme,
 } from "@mui/material";
+import { useSearchParams } from "react-router-dom";
 
 const plans = [
   { key: 0, name: "Residencial Inalámbrico" },
@@ -39,6 +40,8 @@ const MenuProps = {
 };
 
 const PlanSelector = ({ error, helperText, onChange }) => {
+  let [searchParams, setSearchParams] = useSearchParams();
+  const valueParam = searchParams.get("plan");
   const theme = useTheme();
   const [Plans, setPlans] = useState([]);
 
@@ -46,15 +49,21 @@ const PlanSelector = ({ error, helperText, onChange }) => {
     const {
       target: { value },
     } = event;
-    setPlans(
-      // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
-    );
+    setPlans(typeof value === "string" ? value.split(",") : value);
   };
 
-  useEffect(()=>{
-    onChange({target: {name: 'plan', value: Plans}})
-  },[Plans])
+  useEffect(() => {
+    if (valueParam) {
+      const filteredPlans = plans.filter((p) => p.key === Number(valueParam));
+      const filteredPlan = filteredPlans[0].name;
+
+      setPlans([filteredPlan]);
+    }
+  }, [valueParam]);
+
+  useEffect(() => {
+    onChange({ target: { name: "plan", value: Plans } });
+  }, [Plans]);
 
   return (
     <FormControl fullWidth>
@@ -68,7 +77,7 @@ const PlanSelector = ({ error, helperText, onChange }) => {
         input={<OutlinedInput label="Planes (Elección Multiple)" />}
         MenuProps={MenuProps}
       >
-        {plans.map(({ name }) => (
+        {plans.map(({ key, name, isCheck }) => (
           <MenuItem
             key={name}
             value={name}

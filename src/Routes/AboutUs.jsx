@@ -562,11 +562,22 @@ const AboutUs = () => {
           <Button
             variant="outlined"
             size="large"
-            sx={{ color: "#fff", border: `rgba(255,255,255, 0.3) 1px solid` }}
+            sx={{
+              color: "#fff",
+              border: `rgba(255,255,255, 0.3) 1px solid`,
+              p: 0,
+            }}
           >
             <Link
-              to="/presupuesto"
-              style={{ color: "inherit", textDecoration: "none" }}
+              target="_blank"
+              to={`/presupuesto`}
+              style={{
+                color: "inherit",
+                textDecoration: "none",
+                width: "100%",
+                height: "100%",
+                padding: "8px 22px",
+              }}
             >
               Presupuesto
             </Link>

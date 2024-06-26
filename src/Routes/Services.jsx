@@ -14,7 +14,7 @@ import {
   LinearProgress,
 } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 
 // Images
 import bg02 from "../assets/images/bg-2.png";
@@ -52,6 +52,7 @@ const services = [
       {
         key: "residencial-inalambrico",
         name: "Residencial Inalámbrico",
+        number: 0,
         plans: [
           {
             key: "residencial-inalambrico-basico-plus",
@@ -88,6 +89,7 @@ const services = [
       {
         key: "residencial-fibra",
         name: "Residencial Fibra Óptica",
+        number: 1,
         plans: [
           {
             key: "residencial-fibra-basico",
@@ -129,6 +131,7 @@ const services = [
       {
         key: "pyme-inalambrico",
         name: "Pyme Inalámbrico",
+        number: 2,
         plans: [
           {
             key: "pyme-inalambrico-basico",
@@ -165,6 +168,7 @@ const services = [
       {
         key: "pyme-fibra",
         name: "Pyme Fibra Óptica",
+        number: 3,
         plans: [
           {
             key: "pyme-fibra-inicial",
@@ -206,6 +210,7 @@ const services = [
       {
         key: "community",
         name: "Community",
+        number: 4,
         plans: [
           {
             key: "community-4m",
@@ -264,7 +269,7 @@ const Services = () => {
     valueParam != null ? valueParam : tabs[0].key
   );
 
-  const generate = ({ key, name, download, upload }) => {
+  const generate = ({ key, name, download, upload }, number) => {
     return (
       <Grid key={key} item xs={1}>
         <Card
@@ -348,8 +353,25 @@ const Services = () => {
             </Box>
           </CardContent>
           <CardActions sx={{ justifyContent: "end" }}>
-            <Button size="small" variant="contained" disableElevation>
-              Presupuesto
+            <Button
+              size="small"
+              variant="contained"
+              disableElevation
+              sx={{ p: 0 }}
+            >
+              <Link
+                target="_blank"
+                to={`/presupuesto?plan=${number}#root`}
+                style={{
+                  color: "inherit",
+                  textDecoration: "none",
+                  width: "100%",
+                  height: "100%",
+                  padding: "4px 10px",
+                }}
+              >
+                Presupuesto
+              </Link>
             </Button>
           </CardActions>
         </Card>
@@ -515,7 +537,7 @@ const Services = () => {
                     >
                       {services.map(({ type, content }) => {
                         if (type === key) {
-                          return content.map(({ key, name, plans }) => (
+                          return content.map(({ key, name, number, plans }) => (
                             <Box key={key}>
                               <Typography
                                 className="teko-text"
@@ -533,7 +555,7 @@ const Services = () => {
                                   mb: "20px",
                                 }}
                               >
-                                {plans.map((p) => generate(p))}
+                                {plans.map((p) => generate(p, number))}
                               </Grid>
                             </Box>
                           ));
@@ -631,6 +653,34 @@ const Services = () => {
                     <SpeedIcon />
                   </Typography>
                   <LinearProgress sx={{ height: 12 }} />
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      margin: "30px 0",
+                    }}
+                  >
+                    <Button
+                      size="large"
+                      variant="contained"
+                      disableElevation
+                      sx={{ p: 0 }}
+                    >
+                      <Link
+                        target="_blank"
+                        to={`/presupuesto?plan=5#root`}
+                        style={{
+                          color: "inherit",
+                          textDecoration: "none",
+                          width: "100%",
+                          height: "100%",
+                          padding: "8px 22px",
+                        }}
+                      >
+                        Presupuesto
+                      </Link>
+                    </Button>
+                  </Box>
                 </Box>
               </Paper>
             </TabPanel>
@@ -706,9 +756,25 @@ const Services = () => {
           <Button
             variant="outlined"
             size="large"
-            sx={{ color: "#fff", border: `rgba(255,255,255, 0.3) 1px solid` }}
+            sx={{
+              color: "#fff",
+              border: `rgba(255,255,255, 0.3) 1px solid`,
+              p: 0,
+            }}
           >
-            Presupuesto
+            <Link
+              target="_blank"
+              to={`/presupuesto`}
+              style={{
+                color: "inherit",
+                textDecoration: "none",
+                width: "100%",
+                height: "100%",
+                padding: "8px 22px",
+              }}
+            >
+              Presupuesto
+            </Link>
           </Button>
         </Box>
       </Paper>
