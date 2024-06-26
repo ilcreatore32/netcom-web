@@ -1,9 +1,20 @@
 // Components
 import Carousel from "../components/Carousel";
 import { Box, Paper, Typography, Button, useTheme } from "@mui/material";
+import { Link } from "react-router-dom";
+
+// Icons
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
 import InsightsIcon from "@mui/icons-material/Insights";
 import LanguageIcon from "@mui/icons-material/Language";
+import PowerIcon from "@mui/icons-material/Power";
+import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
+import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
+import HttpsIcon from "@mui/icons-material/Https";
+import NetworkCheckIcon from "@mui/icons-material/NetworkCheck";
+import LanIcon from "@mui/icons-material/Lan";
+
+// Timeline
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -11,16 +22,11 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import PowerIcon from "@mui/icons-material/Power";
-import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
-import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
-import HttpsIcon from "@mui/icons-material/Https";
-import NetworkCheckIcon from "@mui/icons-material/NetworkCheck";
-import LanIcon from "@mui/icons-material/Lan";
+
+// Images
 import bg02 from "../assets/images/bg-2.png";
 
 const Home = () => {
-
   const theme = useTheme();
 
   const oferts = [
@@ -289,7 +295,12 @@ const Home = () => {
             size="large"
             sx={{ color: "#fff", border: `rgba(255,255,255, 0.3) 1px solid` }}
           >
-            Presupuesto
+            <Link
+              to="/presupuesto"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              Presupuesto
+            </Link>
           </Button>
         </Box>
       </Paper>

@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { Box, TextField, Autocomplete } from "@mui/material";
 
-const CountrySelector = ({ error, helperText }) => {
+const CountrySelector = ({ error, helperText, onChange }) => {
+  const [Country, setCountry] = useState(null);
 
   const sortedCountries = countries.sort((a, b) => {
     if (a.suggested && !b.suggested) {
@@ -12,18 +14,22 @@ const CountrySelector = ({ error, helperText }) => {
     }
   });
 
+  const handleChange = (e, newCountry) => {
+    if (newCountry) {
+      setCountry(newCountry);
+    }
+  };
+
+  useEffect(() => {
+    onChange({ target: { name: "countryPhone", value: `+${Country?.phone}` } });
+  }, [Country]);
+
   return (
     <Autocomplete
       id="country-select"
       autoComplete
-      freeSolo
-      defaultValue={{
-        code: "VE",
-        label: "Venezuela",
-        phone: "58",
-        suggested: true,
-      }}
       fullWidth
+      onChange={handleChange}
       options={sortedCountries}
       autoHighlight
       getOptionLabel={(option) => `${option.label} +${option.phone}`}
@@ -48,6 +54,7 @@ const CountrySelector = ({ error, helperText }) => {
         let selected = countries.find(
           ({ label }) => label === params.inputProps.value
         );
+
         return (
           <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
             <TextField

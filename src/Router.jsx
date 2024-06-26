@@ -9,6 +9,7 @@ import Services from "./Routes/Services";
 import Faqs from "./Routes/Faqs";
 import Contact from "./Routes/Contact";
 import ErrorPage from "./Routes/ErrorPage";
+import BudgetRequest from "./Routes/BudgetRequest";
 
 const Router = createBrowserRouter([
   // Root
@@ -45,6 +46,11 @@ const Router = createBrowserRouter([
       {
         path: "/contacto",
         element: <Contact />,
+      },
+      // Budget Request
+      {
+        path: "/Presupuesto",
+        element: <BudgetRequest />,
       },
     ],
     errorElement: <ErrorPage />,

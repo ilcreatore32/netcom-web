@@ -12,8 +12,13 @@ import {
   Card,
   CardContent,
 } from "@mui/material";
+import { Link } from "react-router-dom";
+
+// Images
 import bg02 from "../assets/images/bg-2.png";
 import bg05 from "../assets/images/foto-5.jpg";
+
+// Icons
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const AboutUs = () => {
@@ -559,7 +564,12 @@ const AboutUs = () => {
             size="large"
             sx={{ color: "#fff", border: `rgba(255,255,255, 0.3) 1px solid` }}
           >
-            Presupuesto
+            <Link
+              to="/presupuesto"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              Presupuesto
+            </Link>
           </Button>
         </Box>
       </Paper>

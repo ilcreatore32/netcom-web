@@ -29,19 +29,19 @@ import NetworkCheckIcon from "@mui/icons-material/NetworkCheck";
 const tabs = [
   {
     key: "residencial",
-    name: "Residencial",
+    name: "Plan Residencial",
   },
   {
     key: "pyme",
-    name: "Pyme",
+    name: "Plan Pyme",
   },
   {
     key: "community",
-    name: "Community",
+    name: "Plan Community",
   },
   {
     key: "empresarial-dedicado",
-    name: "Empresarial Dedicado",
+    name: "Plan Empresarial Dedicado",
   },
 ];
 
@@ -456,7 +456,7 @@ const Services = () => {
         sx={{
           display: "flex",
           width: "100%",
-          height: "100vh",
+          height: "100%",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",

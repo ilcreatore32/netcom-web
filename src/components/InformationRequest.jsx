@@ -15,10 +15,8 @@ const InformationRequest = () => {
     email: "",
     location: "",
     phone: "",
-    countryName: "",
     countryPhone: "",
     document: "",
-    plan: "",
   });
   const [isValid, setIsValid] = useState(false);
   const [errors, setErrors] = useState({
@@ -42,19 +40,11 @@ const InformationRequest = () => {
       state: false,
       message: "",
     },
-    countryName: {
-      state: false,
-      message: "",
-    },
     countryPhone: {
       state: false,
       message: "",
     },
     document: {
-      state: false,
-      message: "",
-    },
-    plan: {
       state: false,
       message: "",
     },
@@ -92,8 +82,6 @@ const InformationRequest = () => {
     setForm({
       ...form,
       [name]: value,
-      ["countryName"]: document.getElementById("countryName").value,
-      ["countryPhone"]: document.getElementById("countryPhone").value,
     });
 
     handleErrors(e);
@@ -103,7 +91,7 @@ const InformationRequest = () => {
   const handleErrors = (e) => {
     const { name, value } = e.target;
 
-    if (value === "" && name !== "plan") {
+    if (value === "") {
       setErrors({
         ...errors,
         [name]: {
@@ -300,8 +288,8 @@ const InformationRequest = () => {
         sx={{ display: "flex", justifyContent: "space-between", gap: "15px" }}
       >
         <CountrySelector
-          error={errors.countryName.state}
-          helperText={errors.countryName.message}
+          error={errors.countryPhone.state}
+          helperText={errors.countryPhone.message}
           onChange={handleChange}
         />
         <TextField
@@ -323,19 +311,9 @@ const InformationRequest = () => {
           name="document"
           label="Documento de Identificación"
           variant="outlined"
-          fullWidth
+          sx={{ width: "49%" }}
           error={errors.document.state}
           helperText={errors.document.message}
-          onChange={(e) => handleChange(e)}
-        />
-        <TextField
-          id="plan"
-          name="plan"
-          label="Plan Deseado (Opcional)"
-          variant="outlined"
-          fullWidth
-          error={errors.plan.state}
-          helperText={errors.plan.message}
           onChange={(e) => handleChange(e)}
         />
       </Box>
