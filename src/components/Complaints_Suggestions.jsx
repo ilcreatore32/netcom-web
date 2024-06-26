@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Box, TextField, Button } from "@mui/material";
+import { Box, TextField, Button, Snackbar, Alert, Slide } from "@mui/material";
+import emailjs from "@emailjs/browser";
 
 const Complaints_Suggestions = () => {
   const [form, setForm] = useState({
@@ -37,6 +38,20 @@ const Complaints_Suggestions = () => {
       message: "",
     },
   });
+
+  // Feedback Control
+  const [open, setOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const handleClose = (e, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+  function SlideTransition(props) {
+    return <Slide {...props} direction="right" />;
+  }
 
   useEffect(() => {
     const isValid =
@@ -82,7 +97,7 @@ const Complaints_Suggestions = () => {
     name == "phone" && phoneValidation(e);
     name == "email" && emailValidation(e);
   };
-  
+
   const phoneValidation = (e) => {
     if (!/^(0412|0414|0424|0416|0426)\d{7}$/.test(e.target.value)) {
       setErrors({
@@ -125,9 +140,12 @@ const Complaints_Suggestions = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (isValid) {
+      // quejassugerenciasnetcomplus@gmail.com
+      // xMrJ3d9vn8j8qdZ
+
       let message = `Hola soy ${form.name}, utilice el buzón de Quejas y Sugerencias aqui esta mi información:
         Correo Electrónico: ${form.email},
         Teléfono: ${form.phone},
@@ -136,7 +154,19 @@ const Complaints_Suggestions = () => {
         Mensaje: ${form.message}
       `;
 
-      window.open(`https://wa.me/584244200034?text=${message}`, "_blank");
+      await emailjs.init("OdBxPXrv_VHWsnivY");
+
+      await emailjs
+        .send("service_mtb4q0s", "template_3omhae6", { message })
+        .then(
+          () => {
+            setOpen(true);
+          },
+          (error) => {
+            setErrorMessage(error.text)
+            setOpen(true);
+          }
+        );
     }
   };
 
@@ -230,6 +260,30 @@ const Complaints_Suggestions = () => {
           Enviar
         </Button>
       </Box>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        TransitionComponent={SlideTransition}
+      >
+        {errorMessage === null ? (
+          <Alert
+            severity="success"
+            variant="filled"
+            sx={{ width: "100%", color: "#fff" }}
+          >
+            Se ha enviado correctamente su Mensaje
+          </Alert>
+        ) : (
+          <Alert
+            severity="error"
+            variant="filled"
+            sx={{ width: "100%", color: "#fff" }}
+          >
+            Ha ocurrido un Error, intente nuevamente
+          </Alert>
+        )}
+      </Snackbar>
     </Box>
   );
 };
