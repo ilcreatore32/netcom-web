@@ -104,6 +104,11 @@ const Footer = () => {
       label: "Oficinas Comerciales",
       href: "/contacto#otros",
     },
+    {
+      id: "3",
+      label: "Presupuesto",
+      href: "/presupuesto",
+    },
   ];
 
   const generateList = (title, list) => {

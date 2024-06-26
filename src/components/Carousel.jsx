@@ -75,7 +75,7 @@ const Carousel = () => {
       <Box
         sx={{
           width: "100%",
-          height: "calc(100vh - 64px)",
+          height: "calc(100vh - 65px)",
           position: "relative"
         }}
       >
@@ -88,7 +88,7 @@ const Carousel = () => {
                   sx={{
                     position: "absolute",
                     width: "100vw",
-                    height: "calc(100vh - 64px)",
+                    height: "calc(100vh - 65px)",
                     zIndex: "999",
                     backgroundSize: "cover",
                     backgroundImage: `url(${img.image})`,

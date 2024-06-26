@@ -83,6 +83,7 @@ const Navbar = () => {
         sx={{
           bgcolor: theme.palette.background.paper,
           color: theme.palette.text.primary,
+          border: `${theme.palette.divider} 1px solid`
         }}
       >
         <Toolbar sx={{ px: "5px" }}>

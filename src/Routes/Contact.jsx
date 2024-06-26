@@ -15,7 +15,7 @@ const Contact = () => {
       <Box
         sx={{
           width: "100vw",
-          height: "calc(100vh - 64px)",
+          height: "calc(100vh - 65px)",
           position: "relative",
         }}
       >

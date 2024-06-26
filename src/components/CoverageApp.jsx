@@ -180,7 +180,7 @@ const CoverageApp = () => {
   }, [q, cType]);
 
   return (
-    <Box sx={{ width: "100%", height: "calc(100vh - 64px)", display: "flex" }}>
+    <Box sx={{ width: "100%", height: "calc(100vh - 65px)", display: "flex" }}>
       <Paper
         square
         elevation={0}

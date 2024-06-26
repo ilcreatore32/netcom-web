@@ -24,7 +24,7 @@ export default function ErrorPage() {
         square
         sx={{
           width: "100%",
-          height: "calc(100vh - 64px)",
+          height: "calc(100vh - 65px)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
