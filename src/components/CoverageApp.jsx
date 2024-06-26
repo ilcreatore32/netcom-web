@@ -137,7 +137,7 @@ const CoverageApp = () => {
   };
 
   useEffect(() => {
-    if (q == "") {
+    if (q === "") {
       setData(cType === "wireless" ? Wireless : Fiber);
     } else {
       let tempData = cType === "wireless" ? Wireless : Fiber;
@@ -148,10 +148,31 @@ const CoverageApp = () => {
         const itemNameNormalized = item.name
           .normalize("NFD")
           .replace(/[\u0300-\u036f]/g, "");
+        const itemAreaNormalized = item.area
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+        const searchTermsNormalized = qNormalized
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
 
-        return itemNameNormalized
-          .toLowerCase()
-          .includes(qNormalized.toLowerCase());
+        return (
+          // Includes by Name
+          itemNameNormalized
+            .toLowerCase()
+            .includes(qNormalized.toLowerCase()) ||
+          // Includes by Area
+          itemAreaNormalized
+            .toLowerCase()
+            .includes(qNormalized.toLowerCase()) ||
+          // Includes by Name + Area
+          (itemNameNormalized + " " + itemAreaNormalized)
+            .toLowerCase()
+            .includes(searchTermsNormalized.toLowerCase()) ||
+          // Includes by Area + Name
+          (itemAreaNormalized + " " + itemNameNormalized)
+            .toLowerCase()
+            .includes(searchTermsNormalized.toLowerCase())
+        );
       });
 
       setData(filteredData);
