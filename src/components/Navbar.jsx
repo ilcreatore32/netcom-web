@@ -5,8 +5,6 @@ import {
   Toolbar,
   Button,
   Tooltip,
-  Menu,
-  MenuItem,
   ToggleButton,
   useTheme,
 } from "@mui/material";
@@ -22,8 +20,8 @@ const Navbar = () => {
     {
       id: "0",
       label: "Inicio",
-      href: "/inicio",
-      isActive: useMatch({ path: `/inicio/*`, end: true }),
+      href: "/",
+      isActive: useMatch({ path: `/`, end: true }),
     },
     {
       id: "1",
@@ -89,7 +87,7 @@ const Navbar = () => {
       >
         <Toolbar sx={{ px: "5px" }}>
           <Button href="/">
-            <NetcomLogo></NetcomLogo>
+            <NetcomLogo />
           </Button>
           <Box
             sx={{

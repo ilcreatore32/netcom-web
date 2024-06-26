@@ -19,7 +19,7 @@ const Router = createBrowserRouter([
     children: [
       // Home
       {
-        path: "/inicio",
+        index: true,
         element: <Home />,
       },
       // AboutUs
