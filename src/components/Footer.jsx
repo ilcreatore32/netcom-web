@@ -1,11 +1,11 @@
 import {
-  Grid,
   Paper,
   Typography,
   Box,
   List,
   ListItem,
   ListItemText,
+  Divider,
   useTheme,
 } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -21,7 +21,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Footer = () => {
-
   const services = [
     {
       id: "0",
@@ -117,11 +116,24 @@ const Footer = () => {
         <Typography color="textPrimary" variant="h6" component="span">
           {title}
         </Typography>
+        <Divider
+          sx={{
+            py: 0,
+            width: { xs: "15%", sm: "15%", md: "50%" },
+            maxWidth: 360,
+            borderRadius: 2,
+            border: "2px solid",
+            borderColor: "divider",
+            backgroundColor: theme.palette.primary.main,
+          }}
+        />
         <List
           dense
           sx={{
             display: "flex",
-            flexDirection: "column",
+            flexDirection: { xs: "row", sm: "row", md: "column" },
+            justifyContent: { xs: "center", sm: "center", md: "flex-start" },
+            flexWrap: { xs: "wrap", sm: "wrap", md: "nowrap" },
             alignItems: "center",
           }}
         >
@@ -129,6 +141,7 @@ const Footer = () => {
             <ListItem
               key={li.id}
               sx={{
+                width: { xs: "fit-content", sm: "fit-content", md: "100%" },
                 "&:hover": {
                   cursor: "pointer",
                   color: theme.palette.primary.main,
@@ -147,8 +160,17 @@ const Footer = () => {
                   gap: "10px",
                 }}
               >
-                {li.icon ? li.icon : null}
-                <ListItemText primary={li.label} />
+                {li.icon ? (
+                  <>
+                    {li.icon}
+                    <ListItemText
+                      sx={{ display: { xs: "none", sm: "none", md: "block" } }}
+                      primary={li.label}
+                    />
+                  </>
+                ) : (
+                  <ListItemText primary={li.label} />
+                )}
               </Link>
             </ListItem>
           ))}
@@ -160,56 +182,91 @@ const Footer = () => {
   const theme = useTheme();
 
   return (
-    <Paper
-      square
-      elevation={2}
-      sx={{
-        width: "100%",
-        paddingY: "1rem",
-      }}
-    >
-      <Grid
-        container
-        spacing={2}
+    <>
+      <Paper
+        square
+        elevation={1}
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: "30px",
+          width: "100%",
+          paddingTop: "50px",
         }}
       >
-        <Grid
-          item
-          xs={2}
+        <Box
           sx={{
             display: "flex",
-            flexDirection: "column",
+            flexDirection: { xs: "column", sm: "column", md: "row" },
+            gap: "20px",
+          }}
+        >
+          <Box
+            sx={{
+              width: { xs: "100%", sm: "100%", md: "30%" },
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <NetcomLogo></NetcomLogo>
+          </Box>
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              flexDirection: { xs: "column", sm: "column", md: "row" },
+              justifyContent: {
+                xs: "center",
+                sm: "center",
+                md: "space-evenly",
+              },
+              gap: "20px",
+            }}
+          >
+            <Box
+              sx={{
+                display: { xs: "flex", sm: "flex", md: "block" },
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              {generateList("Servicios", services)}
+            </Box>
+            <Box
+              sx={{
+                display: { xs: "flex", sm: "flex", md: "block" },
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              {generateList("Nuestras Redes", socials)}
+            </Box>
+            <Box
+              sx={{
+                display: { xs: "flex", sm: "flex", md: "block" },
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              {generateList("Plataforma", platforms)}
+            </Box>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            marginTop: "40px",
+            display: "flex",
+            justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <NetcomLogo></NetcomLogo>
-        </Grid>
-        <Grid item xs={2}>
-          {generateList("Servicios", services)}
-        </Grid>
-        <Grid item xs={2}>
-          {generateList("Nuestras Redes", socials)}
-        </Grid>
-        <Grid item xs={2}>
-          {generateList("Plataforma", platforms)}
-        </Grid>
-      </Grid>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Typography color="textSecondary" variant="subtitle2">
-          {`${new Date().getFullYear()} © | Netcom Plus. All rights reserved.`}
-        </Typography>
-      </Box>
-    </Paper>
+          <Typography color="textSecondary" variant="subtitle2">
+            {`${new Date().getFullYear()} © | Netcom Plus. All rights reserved.`}
+          </Typography>
+        </Box>
+      </Paper>
+    </>
   );
 };
 
