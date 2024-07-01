@@ -9,7 +9,6 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Backdrop,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -117,10 +116,15 @@ const AboutUs = () => {
           alignItems: "center",
           justifyContent: "center",
           gap: "20px",
-          padding: "30px",
+          padding: { xs: "20px 10px", sm: "20px 10px", md: "30px" },
         }}
       >
-        <Typography className="teko-text" variant="h2" component="span">
+        <Typography
+          className="teko-text"
+          variant="h2"
+          component="span"
+          sx={{ textAlign: "center" }}
+        >
           <Box
             className="teko-text"
             component="span"
@@ -142,7 +146,7 @@ const AboutUs = () => {
           elevation={2}
           sx={{
             display: "flex",
-            width: "50%",
+            width: { xs: "100%", sm: "100%", md: "50%" },
             padding: "0",
             boxShadow: "none",
             border: `${alpha(theme.palette.text.primary, 0.12)} 1px solid`,
@@ -152,8 +156,9 @@ const AboutUs = () => {
             variant="subtitle1"
             component="span"
             sx={{
+              fontSize: { xs: "18px", sm: "18px", md: "inherit" },
               borderLeft: `${theme.palette.primary.main} 8px solid`,
-              padding: "30px",
+              padding: "10px 30px",
             }}
           >
             Somos una empresa de telecomunicaciones que trabaja día tras día
@@ -174,26 +179,33 @@ const AboutUs = () => {
           display: "flex",
           width: "100%",
           minHeight: "500px",
-          padding: "30px",
+          padding: { xs: "20px 10px", sm: "20px 10px", md: "30px" },
         }}
       >
         <Box
           sx={{
             display: "flex",
+            flexDirection: { xs: "column", sm: "column", md: "row" },
             alignItems: "center",
             gap: "20px",
-            padding: "15px",
+            padding: { xs: 0, sm: 0, md: "15px" },
           }}
         >
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: "15px",
               width: "100%",
             }}
           >
-            <Typography variant="h6" component="p">
+            <Typography
+              variant="h6"
+              component="p"
+              sx={{
+                fontSize: { xs: "18px", sm: "18px", md: "1.25rem" },
+                m: { xs: "0 5px", sm: "0 5px", md: 0 },
+              }}
+            >
               Nuestros usuarios confían en nosotros gracias a lo que somos y a
               lo que nuestro equipo nos permite ser. Ofrecemos una atención al
               cliente personalizada los 365 días del año sin interrupciones.
@@ -374,10 +386,15 @@ const AboutUs = () => {
           alignItems: "center",
           justifyContent: "center",
           gap: "20px",
-          padding: "30px",
+          padding: { xs: "20px 10px", sm: "20px 10px", md: "30px" },
         }}
       >
-        <Typography className="teko-text" variant="h2" component="span">
+        <Typography
+          className="teko-text"
+          variant="h2"
+          component="span"
+          sx={{ textAlign: "center" }}
+        >
           <Box
             className="teko-text"
             component="span"
@@ -398,8 +415,7 @@ const AboutUs = () => {
           square
           sx={{
             display: "flex",
-            width: "50%",
-            padding: "0",
+            width: { xs: "100%", sm: "100%", md: "50%" },
             boxShadow: "none",
           }}
         >
@@ -408,7 +424,7 @@ const AboutUs = () => {
             component="span"
             sx={{
               borderLeft: `${theme.palette.primary.main} 8px solid`,
-              padding: "30px",
+              padding: { xs: "20px 10px", sm: "20px 10px", md: "30px" },
             }}
           >
             Es ideal para los negocios, al ser de calidad y rendimiento premium,
@@ -447,7 +463,7 @@ const AboutUs = () => {
             position: "absolute",
             width: "100%",
             height: "100%",
-            backgroundColor: "#0006",
+            backgroundColor: "#0004",
           }}
         />
         <Box
@@ -525,7 +541,7 @@ const AboutUs = () => {
             position: "absolute",
             width: "100%",
             height: "100%",
-            backgroundColor: "#0006",
+            backgroundColor: "#0004",
           }}
         />
         <Box
@@ -602,7 +618,7 @@ const AboutUs = () => {
             position: "absolute",
             width: "100%",
             height: "100%",
-            backgroundColor: "#0006",
+            backgroundColor: "#0004",
           }}
         />
         <Box
@@ -667,87 +683,118 @@ const AboutUs = () => {
           display: "flex",
           width: "100%",
           height: "500px",
-          padding: "30px",
-          backgroundSize: "cover",
-          backgroundImage: `url(${bg02})`,
+          position: "relative",
+          padding: 0,
         }}
       >
         <Box
+          component={"img"}
+          src={bg02}
           sx={{
+            width: "100%",
+            height: "500px",
+            objectFit: "cover",
+            objectPosition: "bottom",
+          }}
+        />
+        <Box
+          sx={{
+            position: "absolute",
             display: "flex",
-            flexDirection: "column",
-            height: "100%",
-            alignItems: "center",
-            justifyContent: "center",
-            flexGrow: 1,
+            flexDirection: { xs: "column", sm: "column", md: "row" },
+            justifyContent: { xs: "center", sm: "center", md: "flex-start" },
+            gap: { xs: "30px", sm: "30px", md: 0 },
+            width: "100%",
+            height: "500px",
           }}
         >
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
-              borderLeft: `${theme.palette.primary.main} 8px solid`,
-              padding: "0 30px",
+              height: { xs: "fit-content", sm: "fit-content", md: "100%" },
+              alignItems: "center",
+              justifyContent: "center",
+              flexGrow: { xs: 0, sm: 0, md: 1 },
             }}
           >
-            <Typography
-              className="teko-text"
-              variant="h2"
-              component="span"
-              sx={{ color: "#fff" }}
-            >
-              EL INTERNET
-            </Typography>
-            <Typography
-              className="teko-text"
-              variant="h2"
-              component="span"
-              sx={{ color: "#fff" }}
-            >
-              ESTÁ ENTRE NOSOTROS
-              <Box
-                className="teko-text"
-                component="span"
-                sx={{ color: theme.palette.primary.main }}
-              >
-                .
-              </Box>
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            height: "100%",
-            alignItems: "center",
-            justifyContent: "center",
-            flexGrow: 3,
-          }}
-        >
-          <Button
-            variant="outlined"
-            size="large"
-            sx={{
-              color: "#fff",
-              border: `rgba(255,255,255, 0.3) 1px solid`,
-              p: 0,
-            }}
-          >
-            <Link
-              target="_blank"
-              to={`/presupuesto`}
-              style={{
-                color: "inherit",
-                textDecoration: "none",
-                width: "100%",
-                height: "100%",
-                padding: "8px 22px",
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                borderLeft: {
+                  xs: "none",
+                  sm: "none",
+                  md: `${theme.palette.primary.main} 8px solid`,
+                },
+                padding: { xs: "0 10px", sm: "0 10px", md: "0 30px" },
               }}
             >
-              Presupuesto
-            </Link>
-          </Button>
+              <Typography
+                className="teko-text"
+                variant="h2"
+                component="span"
+                sx={{
+                  color: "#fff",
+                  fontSize: { xs: "32px", sm: "32px", md: "3.75rem" },
+                }}
+              >
+                EL INTERNET
+              </Typography>
+              <Typography
+                className="teko-text"
+                variant="h2"
+                component="span"
+                sx={{
+                  color: "#fff",
+                  fontSize: { xs: "32px", sm: "32px", md: "3.75rem" },
+                }}
+              >
+                ESTÁ ENTRE NOSOTROS
+                <Box
+                  className="teko-text"
+                  component="span"
+                  sx={{ color: theme.palette.primary.main }}
+                >
+                  .
+                </Box>
+              </Typography>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              height: { xs: "fit-content", sm: "fit-content", md: "100%" },
+              alignItems: "center",
+              justifyContent: "center",
+              flexGrow: { xs: 0, sm: 0, md: 3 },
+            }}
+          >
+            <Button
+              variant="outlined"
+              size="large"
+              sx={{
+                color: "#fff",
+                border: `rgba(255,255,255, 0.3) 1px solid`,
+                p: 0,
+              }}
+            >
+              <Link
+                target="_blank"
+                to={`/presupuesto`}
+                style={{
+                  color: "inherit",
+                  textDecoration: "none",
+                  width: "100%",
+                  height: "100%",
+                  padding: "8px 22px",
+                }}
+              >
+                Presupuesto
+              </Link>
+            </Button>
+          </Box>
         </Box>
       </Paper>
     </>

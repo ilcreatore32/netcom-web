@@ -1,13 +1,57 @@
-import { Box, Paper, Typography, useTheme, alpha } from "@mui/material";
+import {
+  Box,
+  Paper,
+  Typography,
+  useTheme,
+  alpha,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import Complaints_Suggestions from "../components/Complaints_Suggestions";
 import InformationRequest from "../components/InformationRequest";
 import ContactMethods from "../components/ContactMethods";
 
 // Images
+import bg02 from "../assets/images/bg-2.png";
 import bg07 from "../assets/images/foto-7.jpg";
+
+// Icons
+import DomainIcon from "@mui/icons-material/Domain";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Contact = () => {
   const theme = useTheme();
+
+  const LinkLi = ({ text, icon, href }) => (
+    <a href={href} style={{ color: "inherit", textDecoration: "none" }}>
+      <ListItem
+        color="primary"
+        disablePadding
+        sx={{
+          width: '50%',
+          p: "5px 0",
+          "&:hover": {
+            backgroundColor: alpha(theme.palette.primary.main, 0.1),
+          },
+        }}
+      >
+        <ListItemButton
+          sx={{
+            "&:hover": {
+              backgroundColor: 'transparent',
+            },
+          }}
+        >
+          <ListItemIcon>{icon}</ListItemIcon>
+          <ListItemText primary={text} />
+        </ListItemButton>
+      </ListItem>
+    </a>
+  );
 
   return (
     <>
@@ -78,6 +122,7 @@ const Contact = () => {
           </Paper>
         </Paper>
       </Box>
+
       {/* Solicitud de Información */}
       <Paper
         square
@@ -121,10 +166,12 @@ const Contact = () => {
           </Typography>
           <InformationRequest />
           <Typography variant="body1" component={"span"}>
-            Al enviar tu información un asesor de Netcom Plus se comunicara contigo.
+            Al enviar tu información un asesor de Netcom Plus se comunicara
+            contigo.
           </Typography>
         </Box>
       </Paper>
+
       {/* Buzón de Quejas y Sugerencias */}
       <Paper
         square
@@ -167,6 +214,7 @@ const Contact = () => {
         </Box>
         <Complaints_Suggestions />
       </Paper>
+
       {/* Otros Metodos de Contacto */}
       <Paper
         id="otros"
@@ -198,6 +246,100 @@ const Contact = () => {
           </Box>
         </Typography>
         <ContactMethods />
+      </Paper>
+
+      {/* 'Alguna Pregunta' */}
+      <Paper
+        square
+        elevation={0}
+        sx={{
+          display: "flex",
+          width: "100%",
+          height: "500px",
+          padding: "30px",
+          backgroundSize: "cover",
+          backgroundImage: `url(${bg02})`,
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+            flexGrow: 1,
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              borderLeft: `${theme.palette.primary.main} 8px solid`,
+              padding: "0 30px",
+            }}
+          >
+            <Typography
+              className="teko-text"
+              variant="h2"
+              component="span"
+              sx={{ color: "#fff" }}
+            >
+              ALGUNA PREGUNTA
+              <Box
+                className="teko-text"
+                component="span"
+                sx={{ color: theme.palette.primary.main }}
+              >
+                ?
+              </Box>
+            </Typography>
+            <Typography
+              className="teko-text"
+              variant="h2"
+              component="span"
+              sx={{ color: "#fff" }}
+            >
+              CONTACTENOS AHORA MISMO
+              <Box
+                className="teko-text"
+                component="span"
+                sx={{ color: theme.palette.primary.main }}
+              >
+                .
+              </Box>
+            </Typography>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <List>
+            <LinkLi
+              text="Urb. Kerdell, Av. Paseo Cabriales, Edif. Torre Movilnet, piso 6, Ofic. 5-6 Valencia, Zona Postal 2001"
+              icon={<DomainIcon />}
+              href={
+                "https://www.google.com/maps/place/Torre+Movilnet/@10.2008118,-68.0035498,15z/data=!4m6!3m5!1s0x8e805dfa834df781:0x6e16cda3fd2f93de!8m2!3d10.2008118!4d-68.0035498!16s%2Fg%2F11j7dp3ywb?entry=ttu"
+              }
+            />
+            <LinkLi
+              text="+58 241 774 0318"
+              icon={<LocalPhoneIcon />}
+              href={"https://wa.me/+582417740318"}
+            />
+            <LinkLi
+              text="ventas@netcomplusve.com"
+              icon={<EmailIcon />}
+              href={"mailto:ventas@netcomplusve.com"}
+            />
+          </List>
+        </Box>
       </Paper>
     </>
   );
