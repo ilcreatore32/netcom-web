@@ -84,6 +84,7 @@ const Carousel = () => {
             {images.map((img, index) => {
               return (
                 <Box
+                key={index}
                   component="img"
                   sx={{
                     position: "absolute",

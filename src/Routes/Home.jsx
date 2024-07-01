@@ -1,4 +1,5 @@
 // Components
+import { useState, useEffect } from "react";
 import Carousel from "../components/Carousel";
 import { Box, Paper, Typography, Button, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -26,8 +27,46 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 // Images
 import bg02 from "../assets/images/bg-2.png";
 
+import SpeedTester from "browser-speed-test";
+/**
+ * @param {object} optional - The tester config.
+ * @param optional.url Links to resources such as downloaded images for testing.
+ * @param optional.fileSize When CROS is disabled, we use the img tag to test, the fileSize is required.
+ * @param optional.testFrequency Testing frequency.
+ * @param optional.onProgress The testing progress callback function.
+ */
+
+const tester = new SpeedTester({
+  url: { 
+    url: 'https://cors-anywhere.herokuapp.com/https://www.netflix.com/ve/',
+  },
+  testFrequency: 1000, 
+  onProgress: (e) => console.log('Progress: ', Math.floor(e))
+},);
+tester.corsEnabled(false);
+
 const Home = () => {
   const theme = useTheme();
+
+  const [Result, setResult] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setResult(await tester.start());
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    //fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (Result != null) {
+      console.log(Math.floor(Result));
+    }
+  }, [Result]);
 
   const oferts = [
     {
