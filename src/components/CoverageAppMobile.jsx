@@ -8,6 +8,12 @@ import {
   Autocomplete,
   CircularProgress,
   IconButton,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Button,
   useTheme,
 } from "@mui/material";
 import Wireless from "../assets/json/wireless.json";
@@ -32,7 +38,7 @@ const GoogleMap = ({ map }) => {
   return (
     <>
       {!loading ? (
-        <Box sx={{ width: "100%", height: "100%" }}>
+        <Box sx={{ width: "100%", height: "calc(100vh - 175px)" }}>
           <iframe
             title="Netcom Coverage Map"
             src={map}
@@ -48,7 +54,7 @@ const GoogleMap = ({ map }) => {
         <Paper
           sx={{
             width: "100%",
-            height: "100%",
+            height: "calc(100vh - 175px)",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -65,14 +71,17 @@ const GoogleMap = ({ map }) => {
 
 const CoverageAppMobile = () => {
   const theme = useTheme();
+
+  // States
   const [value, setValue] = useState(null);
   const [data, setData] = useState([]);
+  const [cType, setCType] = useState("fiber");
   const [go, setGo] = useState(null);
   const [map, setMap] = useState(
     "https://www.google.com/maps/d/embed?mid=1Ui-jS8emaTOTh47ImSqIKCp79Cmo_uA&ll"
   );
+  const [open, setOpen] = useState(false);
 
-  const [cType, setCType] = useState("fiber");
   const handleType = (e, newType) => {
     if (newType !== null) {
       setCType(newType);
@@ -128,6 +137,10 @@ const CoverageAppMobile = () => {
     setGo(selected);
   };
 
+  const handleClose = (value) => {
+    setOpen(false);
+  };
+
   useEffect(() => {
     if (value === null) {
       setData(cType === "wireless" ? Wireless : Fiber);
@@ -138,7 +151,7 @@ const CoverageAppMobile = () => {
 
   return (
     <Box sx={{ width: "100%", height: "100%" }}>
-      <Paper square elevation={0} sx={{ p: '0 5px' }}>
+      <Paper square elevation={0} sx={{ p: "0 5px" }}>
         <Box
           sx={{
             display: "flex",
@@ -180,7 +193,11 @@ const CoverageAppMobile = () => {
               alignItems: "center",
             }}
           >
-            <IconButton size="small" color="primary">
+            <IconButton
+              size="small"
+              color="primary"
+              onClick={() => setOpen(true)}
+            >
               <InfoOutlinedIcon />
             </IconButton>
           </Box>
@@ -222,6 +239,24 @@ const CoverageAppMobile = () => {
         </Box>
       </Paper>
       <GoogleMap map={map} />
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>Información Importante</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Estas visualizando la cobertura
+            <strong>
+              {cType == "wireless" ? " Inalámbrica " : " de Fibra Óptica "}
+            </strong>
+            de Netcom Plus. Tiempo de Actualización de al menos{" "}
+            <strong>30 días</strong>.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus>
+            Cerrar
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Box>
   );
 };
