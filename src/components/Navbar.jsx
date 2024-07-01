@@ -115,7 +115,7 @@ const Navbar = () => {
               color="inherit"
               edge="start"
               onClick={handleToggle}
-              sx={{ mr: 2, display: { xs: "block", sm: "block", md: "none" } }}
+              sx={{ display: { xs: "block", sm: "block", md: "none" }, m: 0 }}
             >
               <MenuIcon />
             </IconButton>
@@ -204,7 +204,7 @@ const Navbar = () => {
           <Box
             sx={{
               width: "100%",
-              height: "66px",
+              height: { xs: "58px", sm: "66px" },
               display: "flex",
               justifyContent: "center",
               alignItems: "center",

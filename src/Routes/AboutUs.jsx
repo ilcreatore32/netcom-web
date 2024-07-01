@@ -9,14 +9,16 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Card,
-  CardContent,
+  Backdrop,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
 // Images
 import bg02 from "../assets/images/bg-2.png";
 import bg05 from "../assets/images/foto-5.jpg";
+import bg09 from "../assets/images/foto-9.jpg";
+import bg10 from "../assets/images/foto-10.jpg";
+import bg11 from "../assets/images/foto-11.jpg";
 
 // Icons
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -424,73 +426,237 @@ const AboutUs = () => {
           </Typography>
         </Paper>
       </Paper>
+
+      {/* 'Ventas' */}
       <Paper
         square
         elevation={1}
         sx={{
           display: "flex",
           width: "100%",
-          minHeight: "400px",
-          justifyContent: "center",
+          minHeight: "500px",
+          flexDirection: "column",
           alignItems: "center",
+          justifyContent: "center",
           gap: "20px",
-          padding: "10px",
+          position: "relative",
         }}
       >
-        <Card
+        <Box
           sx={{
-            width: "400px",
-            height: "200px",
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            backgroundColor: "#0006",
+          }}
+        />
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             alignItems: "center",
-            backgroundColor: alpha(theme.palette.primary.main, 0.8),
-            borderRadius: "0",
+            position: "absolute",
+            top: "30%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: "1",
+            gap: "15px",
           }}
         >
-          <CardContent>
-            <Typography variant="h3" className="teko-text">
-              Ventas
-            </Typography>
-          </CardContent>
-        </Card>
-        <Card
+          <Typography
+            className="teko-text"
+            variant="h2"
+            component="span"
+            sx={{ color: "#fff" }}
+          >
+            Ventas
+            <Box
+              className="teko-text"
+              component="span"
+              sx={{ color: theme.palette.primary.main }}
+            >
+              .
+            </Box>
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            component="span"
+            sx={{ color: "#fff" }}
+          >
+            Asesores comerciales con recomendaciones para servicios
+            residenciales y corporativos.
+          </Typography>
+          <Link to={`/contacto#otros`}>
+            <Button variant="contained" disableElevation>
+              Contacto
+            </Button>
+          </Link>
+        </Box>
+        <Box
+          component={"img"}
+          src={bg11}
+          alt="Imagen Ventas"
           sx={{
-            width: "400px",
-            height: "200px",
+            width: "100%",
+            height: "500px",
+            objectFit: "cover",
+            objectPosition: "bottom",
+          }}
+        />
+      </Paper>
+
+      {/* 'Soporte' */}
+      <Paper
+        square
+        elevation={1}
+        sx={{
+          display: "flex",
+          width: "100%",
+          minHeight: "500px",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "20px",
+          position: "relative",
+        }}
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            backgroundColor: "#0006",
+          }}
+        />
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             alignItems: "center",
-            backgroundColor: alpha(theme.palette.primary.main, 0.8),
-            borderRadius: "0",
+            position: "absolute",
+            top: "30%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: "1",
+            gap: "15px",
           }}
         >
-          <CardContent>
-            <Typography variant="h3" className="teko-text">
-              Soporte
-            </Typography>
-          </CardContent>
-        </Card>
-        <Card
+          <Typography
+            className="teko-text"
+            variant="h2"
+            component="span"
+            sx={{ color: "#fff" }}
+          >
+            Soporte
+            <Box
+              className="teko-text"
+              component="span"
+              sx={{ color: theme.palette.primary.main }}
+            >
+              .
+            </Box>
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            component="span"
+            sx={{ color: "#fff" }}
+          >
+            Con líneas de comunicación directa para cualquier duda e inquietud.
+          </Typography>
+          <Link to={`/contacto#otros`}>
+            <Button variant="contained" disableElevation>
+              Contacto
+            </Button>
+          </Link>
+        </Box>
+        <Box
+          component={"img"}
+          src={bg09}
+          alt="Imagen Soporte"
           sx={{
-            width: "400px",
-            height: "200px",
+            width: "100%",
+            height: "500px",
+            objectFit: "cover",
+            objectPosition: "bottom",
+          }}
+        />
+      </Paper>
+
+      {/* 'Empleos' */}
+      <Paper
+        square
+        elevation={1}
+        sx={{
+          display: "flex",
+          width: "100%",
+          minHeight: "500px",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "20px",
+          position: "relative",
+        }}
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            backgroundColor: "#0006",
+          }}
+        />
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             alignItems: "center",
-            backgroundColor: alpha(theme.palette.primary.main, 0.8),
-            borderRadius: "0",
+            position: "absolute",
+            top: "30%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: "1",
+            gap: "15px",
           }}
         >
-          <CardContent>
-            <Typography variant="h3" className="teko-text">
-              Empleos
-            </Typography>
-          </CardContent>
-        </Card>
+          <Typography
+            className="teko-text"
+            variant="h2"
+            component="span"
+            sx={{ color: "#fff" }}
+          >
+            Empleos
+            <Box
+              className="teko-text"
+              component="span"
+              sx={{ color: theme.palette.primary.main }}
+            >
+              .
+            </Box>
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            component="span"
+            sx={{ color: "#fff" }}
+          >
+            Ofrecemos oportunidades de empleo y desarrollo profesional.
+          </Typography>
+          <Link to={`/contacto#otros`}>
+            <Button variant="contained" disableElevation>
+              Contacto
+            </Button>
+          </Link>
+        </Box>
+        <Box
+          component={"img"}
+          src={bg10}
+          alt="Imagen Empleos"
+          sx={{
+            width: "100%",
+            height: "500px",
+            objectFit: "cover",
+            objectPosition: "bottom",
+          }}
+        />
       </Paper>
 
       {/* 'Entre Nosotros' */}
